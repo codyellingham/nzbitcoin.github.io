@@ -189,6 +189,18 @@
     text-decoration: underline;
   }
 
+/* Remove bullets from first-level items inside .faq-list */
+.faq-list > li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+/* Add bullets to second-level items */
+.faq-list ul li {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+  
 .sponsors {
   display: flex;
   align-items: center;
@@ -289,21 +301,15 @@
   
   <h2>FAQs</h2>
   
-  <ul>
+  <ul class="faq-list">
   <li><strong>Is Bitcoin money?</strong>
     <ul>
-      <li>Yes. It functions as a store of value, medium of exchange, and unit of account, though it is not legal tender in NZ.</li>
+      <li>Yes. Bitcoin functions as a store of value, medium of exchange, and unit of account, though it is not currently legal tender in New Zealand.</li>
     </ul>
   </li>
   <li><strong>What does “de minimis” mean?</strong>
     <ul>
-      <li>It means “too small to matter” in legal terms, often referring to tax exemptions for small amounts.</li>
-    </ul>
-  </li>
-
-    <li><strong>What happens with the $1000 de minimis amount over time?</strong>
-    <ul>
-      <li>It does not adjust automatically. There is discussion about linking it to inflation or reviewing it periodically.</li>
+      <li>It means “too small to matter” in legal terms, often referring to tax exemptions for small amounts below a certain threshold.</li>
     </ul>
   </li>
 
@@ -315,20 +321,14 @@
 
   <li><strong>For BTC → NZD, when does the swap happen exactly?</strong>
     <ul>
-      <li>The swap occurs when the provider converts Bitcoin to NZD. Lightning settlement is instant, exchange settlement is seconds to minutes, and bank transfer is 1–2 business days.</li>
+      <li>The swap occurs when the payment provider converts Bitcoin to NZD. Lightning settlement is instant, exchange settlement is seconds to minutes, and bank transfer can be up to 1–2 business days.</li>
     </ul>
   </li>
-
-  <li><strong>Can people using Square or overseas apps pay in New Zealand?</strong>
-    <ul>
-      <li>Generally no, due to region restrictions. Merchants need a local provider that supports Bitcoin or Lightning.</li>
-    </ul>
-  </li>
-
-  <li><strong>What company is behind Bitcoin and Bitcoin Lightning?</strong>
+    
+  <li><strong>What company is behind Bitcoin?</strong>
     <ul>
       <li>No single company owns Bitcoin. It is an open, decentralised network.</li>
-      <li>Lightning is also open-source and maintained by independent contributors.</li>
+      <li>The Bitcoin Lightning network is also open-source and maintained by independent contributors.</li>
     </ul>
   </li>
 
