@@ -189,17 +189,17 @@
     text-decoration: underline;
   }
 
-/* Remove bullets from first-level items inside .faq-list */
-.faq-list > li {
-  list-style-type: none;
-  margin-bottom: 1rem;
+/* Remove bullets and padding from the top-level UL */
+.faq-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
 }
 
-/* Add bullets to second-level items */
-.faq-list ul li {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-}
+/* Ensure first-level LI are not bulleted */
+.faq-list > li {
+  list-style: none;
+  margin-bottom: 1rem
   
 .sponsors {
   display: flex;
