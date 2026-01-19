@@ -189,18 +189,20 @@
     text-decoration: underline;
   }
 
-/* Step 1: Remove bullets everywhere in this list */
-.faq-list,
-.faq-list li {
+/* Reset FAQ list completely */
+.faq-list li,
+.faq-list li::before {
   list-style: none !important;
-  margin: 0;
-  padding: 0;
+  content: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
-/* Step 2: Add bullets only to second-level li */
+/* Re-add bullets ONLY to second-level li */
 .faq-list > li > ul > li {
   list-style: disc !important;
-  margin-left: 1.5rem;
+  margin-left: 1.5rem !important;
+  padding-left: 0 !important;
 }
   
 .sponsors {
