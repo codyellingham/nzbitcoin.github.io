@@ -200,6 +200,19 @@
 .faq-list > li {
   list-style: none;
   margin-bottom: 1rem
+}
+
+  /* Add bullets only to second-level UL */
+.faq-list ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  padding-left: 1rem; /* optional for alignment */
+}
+
+/* Ensure each second-level LI only has one bullet */
+.faq-list ul li {
+  list-style: disc;
+}
   
 .sponsors {
   display: flex;
