@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bitcoin Policy New Zealand - Bitcoin for Kiwis</title>
+<title>Bitcoin Policy New Zealand — Bitcoin for Kiwis</title>
+<meta name="description" content="Bitcoin Policy New Zealand is a Registered Incorporated Society promoting Bitcoin education, adoption, and policy in New Zealand.">
 <link rel="icon" href="favicon.png" type="image/png">
+
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nzbitcoin.org/">
@@ -12,472 +14,400 @@
 <meta property="og:description" content="Promoting the adoption and use of Bitcoin in New Zealand.">
 <meta property="og:image" content="https://nzbitcoin.org/ogp.jpg">
 
-<!-- Optional Twitter Card -->
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bitcoin Policy New Zealand">
 <meta name="twitter:description" content="Promoting the adoption and use of Bitcoin in New Zealand.">
 <meta name="twitter:image" content="https://nzbitcoin.org/ogp.jpg">
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+<link rel="stylesheet" href="styles.css">
 
-  body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #1a1a1a;
-    background-color: #fff;
-  }
-
-  header {
-    position: relative;
-    background: url('wellington.jpg') center/cover no-repeat;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-  }
-
-  header::after {
-    content: '';
-    position: absolute;
-    top:0; left:0; right:0; bottom:0;
-    background: rgba(0,0,0,0.5);
-  }
-
-  header h1, header p, header ul, header a {
-    position: relative;
-    z-index: 1;
-  }
-
-  header h1 {
-    font-size: 2.5rem;
-    margin: 0 0 1rem;
-    max-width: 75%;
-  }
-
-  header p {
-    font-size: 1.3rem;
-    margin: 0 0 1rem;
-  }
-
-  header ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    text-align: left;
-  }
-
-  header ul li {
-    padding-left: 1.5rem;
-    position: relative;
-    font-size: 1.1rem;
-    margin: 0.4rem 0;
-  }
-
-  header ul li::before {
-    content: '•';
-    color: #f7931a;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.3rem;
-    line-height: 1;
-  }
-
-  .news-item-box {
-    background-color: #ececec; 
-    padding: 20px; 
-    border-radius: 12px;"
-  }
-
-  .cta-button {
-    position: relative;
-    z-index: 1;
-    background-color: #f7931a;
-    color: #fff;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    margin-top: 1rem;
-  }
-
-  .cta-button:hover {
-    background-color: #e07b00;
-  }
-  .link-underline {
-    text-decoration: underline;
-    font-size: 18px;
-  }
-
-  section {
-    padding: 4rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-
-  section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0.5rem 0 1.5rem;
-  }
-
-  section ul li {
-    padding-left: 1.5rem;
-    position: relative;
-    font-size: 1.1rem;
-    margin: 0.4rem 0;
-  }
-
-  section ul li::before {
-    content: '•';
-    color: #f7931a;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.3rem;
-    line-height: 1;
-  }
-
-  .inline-image {
-    max-width: 100%;
-  }
-
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-    justify-content: center;
-  }
-
-  .gallery img {
-    width: 100%;
-    max-width: 280px;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-
-  footer {
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
-    color: #555;
-  }
-
-  .event-outline {
-  font-size: 1.1rem;
-  color: #f2f2f2;
-  margin: 1.5rem auto 0.5rem;
-  max-width: 700px;
-  text-align: center;
-  font-style: italic;
-  opacity: 0.9;
-}
-
-  a {
-    color: #f7931a;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-/* Reset FAQ list completely */
-.faq-list li,
-.faq-list li::before {
-  list-style: none !important;
-  content: none !important;
-  padding-left: 0 !important;
-  margin-left: 0 !important;
-}
-
-/* Re-add bullets ONLY to second-level li */
-.faq-list > li > ul > li {
-  list-style: disc !important;
-  margin-left: 1.5rem !important;
-  padding-left: 0 !important;
-}
-  
-.sponsors {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem; /* space between logos */
-  flex-wrap: wrap; /* allow wrapping on smaller screens */
-  margin-bottom: 80px;
-}
-
-.sponsors img {
-  max-width: 100%;
-  margin: 2rem;
-}
-
-@media(max-width:768px){
-  header {
-    height: auto;
-    padding: 50px 0;
-  }
-  header h1 {
-    font-size: 2.2rem;
-    padding: 0 1rem; /* horizontal padding */
-    max-width: 95%;
-  }
-  header p {
-    font-size: 1rem;
-    padding: 0 1rem; /* horizontal padding */
-  }
-  header ul {
-    padding: 0 1rem; /* horizontal padding for bullets */
-  }
-  .cta-button {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-  }
-  .gallery img {
-    max-width: 90%;
-  }
-  .sponsors {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .sponsors img {
-  max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-}
-}
-</style>
 <!-- MailerLite Universal -->
 <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2349931');
+  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  ml('account', '2349931');
 </script>
 <!-- End MailerLite Universal -->
 </head>
 <body>
 
-  <div style="background-color:white; text-align:center; padding:2rem;">
-  <a href="https://nzbitcoin.org/"><img src="logo.png" alt="Bitcoin NZ Logo" style="max-width:200px; display:inline-block;"></a>
-</div>
-
-<header>
-  <h1>Bitcoin Policy New Zealand:<br/>
-  Empowering New Zealand’s Bitcoin Future through Policy, Education &amp; Adoption.</h1>
-  <p><strong>We are gathering interest from individuals and organisations who would like to become members of Bitcoin Policy New Zealand.</strong></p>
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgxkrZ9cqtZUfO7J8_FFfu-_bwvBpxgjzoiBjta_a8UA2ZXw/viewform?usp=dialog" class="cta-button">Register Membership Interest</a>
- </header>
-<section>
-  <h2>About Bitcoin Policy New Zealand</h2>
-  <p>The Bitcoin Policy New Zealand (BPNZ) is a Registered Incorporated Society dedicated to educating, advocating for, and supporting Bitcoin adoption. We aim to make Bitcoin usable, practical, and beneficial for individuals, businesses, and policymakers across New Zealand.</p>
-
-  <p><strong>Organisation Details:</strong><br>
-  Registered Incorporated Society: <a target="_blank" href="https://app.businessregisters.govt.nz/sber-businesses/viewInstance/view.html?id=229a78e05307b6d8bf1b29667f00cb17c194dfdf770473d6">BITCOIN POLICY NEW ZEALAND INC (50237351)</a><br>
-  NZBN: 9429052975141<br>
-  Societies number: 50237351<br>  
-  </p>
-
- <div class="ml-embedded" data-form="wh4HwA"></div>
-
-  <br><br>
-  <h2>Our Vision</h2>
-  <p>We aim to empower New Zealand individuals, businesses, and government to fully participate in the Bitcoin Network, embracing its potential as a transformative monetary technology. Through education, advocacy, and practical support, we provide the knowledge and tools needed to achieve financial sovereignty, foster economic growth, and unlock the wide-ranging benefits of Bitcoin adoption.</p>
-
-  <h2>Our People</h2>
-  <h4>BPNIZ Executive &amp; Committee</h4>
-  <ul>
-    <li>Kevin Whitmore - Chairperson</li>
-    <li>Daniel Reid - Vice-Chairperson</li>
-    <li>Derek Roth-Biester - Secretary</li>
-    <li>Cody Ellingham - Media</li>
-    <li>Brandon Bucher</li>
-    <li>Jason Crowe</li>
-    <li>Mikey Smith</li>
-  </ul>
-
-    <hr style="margin: 4em 0em;" />
-
-  <h2>Our Bitcoin Policy Paper</h2>
-  <p>Bitcoin is money. New Zealand’s current tax rules make every Bitcoin transaction taxable, creating compliance burdens and discouraging everyday use.</p>
-  <p>A de minimis exemption for payments under NZD $1000 would simplify reporting, encourage adoption, and reduce administrative costs. International examples, including the U.S., Germany, and Portugal, show that small-transaction exemptions boost compliance and innovation.</p>
-  <p>This policy would lower payment transaction fees, support fintech growth, expand consumer choice, and position New Zealand as a forward-thinking hub for digital finance.</p>
-  <a target="_new" href="BPNZ_Policy_Paper_De_minimis_Tax_Exemption_2025-11-12.pdf">View our Bitcoin de minimis tax exemption policy paper.</a>
-
-  <h2>Latest Articles</h2>
-
-  <div class="news-item-box">
-      <h2><b>Bitcoin Has Died 464 Times</b></h2>
-    <h4>February 13th, 2026</h4>
-  <img class="inline-image" src="bitcoin-deaths.png" alt="How many times has Bitcoin died?">
-
-<p><b>A rebuttal to Bitcoin’s $7 billion reckoning</b><br/></p>
-<p>Dr Simon Collins. Chief Revenue Officer – Lightning Pay, Founding Researcher -the Digital Assets Research Institute. 
-According to <a target="_new" href="https://bitcoindeaths.com/">www.bitcoindeaths.com</a>, as of Wednesday the 11th of February 2016 Bitcoin has been declared dead 464 times.</p>
-  
-<p>That figure is not metaphorical. It is a documented count of published obituaries by journalists, economists, and commentators over Bitcoin’s lifetime. Each declaration was accompanied by confidence that this time was different, that the experiment had failed, that the end was inevitable.</p>
-  
-<p>If an investor had allocated $100 each time Bitcoin was declared dead, that investment would be worth approximately...</p>
-
-  <a class="link-underline" target="_blank" href="Bitcoin-Has-Died-464-Times.pdf">Read full article here</a>
-
-    </div>
-    <hr style="margin: 4em 0em;" />
-  <h2>FAQs</h2>
-  
-  <ul class="faq-list">
-  <li><strong>Is Bitcoin money?</strong>
-    <ul>
-      <li>Yes. Bitcoin functions as a store of value, medium of exchange, and unit of account, though it is not currently legal tender in New Zealand.</li>
-    </ul>
-  </li>
-  <li><strong>What does “de minimis” mean?</strong>
-    <ul>
-      <li>It means “too small to matter” in legal terms, often referring to tax exemptions for small amounts below a certain threshold.</li>
-    </ul>
-  </li>
-
-  <li><strong>What are the merchant fees to use Bitcoin Lightning?</strong>
-    <ul>
-      <li>Typically fractions of a cent for routing, plus any service fees from the provider.</li>
-    </ul>
-  </li>
-
-  <li><strong>For BTC → NZD, when does the swap happen exactly?</strong>
-    <ul>
-      <li>The swap occurs when the payment provider converts Bitcoin to NZD. Lightning settlement is instant, exchange settlement is seconds to minutes, and bank transfer can be up to 1–2 business days.</li>
-    </ul>
-  </li>
-    
-  <li><strong>What company is behind Bitcoin?</strong>
-    <ul>
-      <li>No single company owns Bitcoin. It is an open, decentralised network.</li>
-      <li>The Bitcoin Lightning network is also open-source and maintained by independent contributors.</li>
-    </ul>
-  </li>
-
-  <li><strong>What is a Bitcoin node? What does it mean to run a node?</strong>
-    <ul>
-      <li>A node is software that stores and verifies the Bitcoin blockchain. Running a node means enforcing the rules yourself and increasing security and independence.</li>
-    </ul>
-  </li>
-
-  <li><strong>How can Bitcoin be an export industry for New Zealand?</strong>
-    <ul>
-      <li>Through exporting energy via Bitcoin mining.</li>
-      <li>Through software, services, and infrastructure built on Bitcoin and Lightning.</li>
-      <li>Through education, IP, and technology development.</li>
-    </ul>
-  </li>
-
-  <li><strong>What role could Bitcoin play in New Zealand's energy independence and resilience?</strong>
-    <ul>
-      <li>Stabilising electricity demand.</li>
-      <li>Monetising surplus renewable energy.</li>
-      <li>Supporting remote or isolated energy projects.</li>
-      <li>Helping finance new hydro, geothermal, and wind generation.</li>
-    </ul>
-  </li>
-
-  <li><strong>What is a Bitcoin strategic reserve?</strong>
-    <ul>
-      <li>A government-held Bitcoin reserve used for long-term savings, diversification, and protection against currency debasement.</li>
-    </ul>
-  </li>
-
-  <li><strong>What is a Bitcoin treasury company?</strong>
-    <ul>
-      <li>A company that holds Bitcoin as a core reserve asset for protection against inflation, diversification, or strategic positioning.</li>
-    </ul>
-  </li>
-
-  <li><strong>Does the Reserve Bank of New Zealand hold any “assets”? Could they hold Bitcoin?</strong>
-    <ul>
-      <li>Yes, the RBNZ holds foreign reserves and government bonds.</li>
-      <li>They do not currently hold Bitcoin, but could do so if policy and legislation changed.</li>
-    </ul>
-  </li>
-</ul>
-  
-  <hr style="margin: 4em 0em;" />
-  
-  <h2>Contact</h2>
-  <p>Email us - <a href="mailto:info@nzbitcoin.org">info@nzbitcoin.org</a><br/></p>
-  
-  <hr style="margin: 4em 0em;" />
-
-  <h2>Previous events</h2>
-
-    <h3>BPNZ official launch - November 12th, 2025</h3>
-  <p>The official launch of the Bitcoin Policy New Zealand (BPNZ) was held on 12 November 2025 at Chouchou in Wellington. The evening included the release of BPNZ’s first policy paper, <a target="_new" href="BPNZ_Policy_Paper_De_minimis_Tax_Exemption_2025-11-12.pdf">Bitcoin as Money: De minimis tax exemption for Bitcoin payments under NZD $1000</a>, presentations on Bitcoin innovation, and Lightning Network payment demonstrations, with attendees able to purchase drinks using Bitcoin.</p> 
-  <p>The event drew 40 VIP guests, including Hon. Nicole McKee, Minister for Courts and Associate Minister of Justice, Joseph Mooney MP, Greg Fleming MP, and ACT List MP Cameron Luxton, along with representatives from leading Bitcoin businesses, government departments, and other stakeholders. BPNZ Chairperson Kevin Whitmore highlighted how New Zealand’s current tax rules make small Bitcoin transactions difficult to account for and presented our proposal for a de minimis exemption to simplify compliance, lower payment costs, and support innovation.</p> 
-  <p>The launch demonstrated how Bitcoin can function as money in New Zealand, reinforcing BPNZ’s mission to enable the country’s participation in the global shift toward digital, open-standard money while engaging policymakers, industry leaders, and the public.</p>    
-  <p><a class="link-underline" target="_blank" href="https://www.thetransformationofvalue.com/articles/lightning-bolts-of-bitcoin-innovation-strike-the-capital">Read full article here.</a></p>
-  <div class="gallery">
-    <img src="Hon-Nicole-McKee-BPNZ-launch.jpg" alt="Wellington launch 1">
-        <img src="Joseph-Mooney-BPNZ.jpg" alt="Wellington launch 2">
-    <img src="BPNZ-chairperson-Kevin-Whitmore.jpg" alt="Wellington launch 3">
-        <img src="BPNZ-launch-event.jpg" alt="Wellington launch 4">
-      <img src="Bitcoin-Lightning-card-being-used-for-payments.jpg" alt="Wellington launch 5">
-     <img src="Bitcoin-point-of-sale-Chouchou.jpg" alt="Wellington launch 6">
+<!-- ============================================================
+     SITE NAVIGATION  (shared across all pages)
+     ============================================================ -->
+<header class="site-nav" id="top">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">
+      <img src="logo.png" alt="Bitcoin Policy New Zealand">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#policy">Policy</a>
+      <a href="#articles">Articles</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#events">Events</a>
+      <a href="#membership">Membership</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cta" href="https://btcpay.nzbitcoin.org/" target="_blank" rel="noopener">Become a member</a>
+    </nav>
   </div>
+</header>
 
-    <hr style="margin: 4em 0em;" />
-
-  <h3>Previous BPNZ event at New Zealand Parliament - June 4th, 2025</h3>
-  <p>On Wednesday, June 4th 2025, Kiwi Bitcoin experts, members of the Bitcoin Policy New Zealand, and representatives from the Bitcoin Basin circular economy gave a special presentation to over 20 coalition MPs at New Zealand’s Parliament.</p>
-  <a class="link-underline" href="https://www.thetransformationofvalue.com/articles/new-zealand-parliament-buzzes-with-bitcoin">Read full article here.</a>
-  
-  <div class="gallery">
-    <img src="gallery1.jpg" alt="Wellington 1">
-    <img src="gallery2.jpg" alt="Wellington 2">
-    <img src="gallery3.jpg" alt="Wellington 3">
-  </div>
-
-    <hr style="margin: 4em 0em;" />
-
-    <h2>Our International Collaborators</h2>
-    <div class="sponsors"> 
-     <a href="https://bitcoincoalition.ca/" target="_blank">
-      <img src="bcc.jpg" alt="Bitcoin Coalition of Canada" style="width:150px;">
-    </a>
-     <a href="https://bitcoinindustrybody.org.au/" target="_blank">
-      <img src="abib.png" alt="Australian Bitcoin Industry Body" style="width:200px;">
-    </a>
-    <a href="https://bitcoinpolicy.au/" target="_blank">
-      <img src="bitcoin-policy-australia-logo.png" alt="Bitcoin Policy Australia" style="width:200px;">
-    </a>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" style="background-image:url('wellington.jpg');">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow eyebrow-light">Registered Incorporated Society · Aotearoa New Zealand</p>
+    <h1>Empowering New Zealand's Bitcoin future through policy, education&nbsp;&amp; adoption.</h1>
+    <p class="hero-lede">We are gathering interest from individuals and organisations who would like to become members of Bitcoin Policy New Zealand.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://btcpay.nzbitcoin.org/" target="_blank" rel="noopener">Become a member</a>
+      <a class="btn btn-ghost" href="#policy">Read our policy</a>
     </div>
+  </div>
 </section>
 
-<footer>
-  Email us - <a href="mailto:info@nzbitcoin.org">info@nzbitcoin.org</a><br/>
-  &copy; 2026 <a href="https://nzbitcoin.org/">Bitcoin Policy New Zealand</a>. 
-  <br/>Follow us on 
-  <a href="https://x.com/bitcoinpolicynz" target="_blank">Twitter/X</a>. 
+<main>
+
+<!-- ============================================================
+     ABOUT  ·  content zone
+     ============================================================ -->
+<section class="band" id="about">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <h2>About Bitcoin Policy New Zealand</h2>
+    <p class="lead">Bitcoin Policy New Zealand (BPNZ) is a Registered Incorporated Society dedicated to educating, advocating for, and supporting Bitcoin adoption. We aim to make Bitcoin usable, practical, and beneficial for individuals, businesses, and policymakers across New Zealand.</p>
+
+    <dl class="org-details">
+      <div class="org-row">
+        <dt>Registered Incorporated Society</dt>
+        <dd><a target="_blank" rel="noopener" href="https://app.businessregisters.govt.nz/sber-businesses/viewInstance/view.html?id=229a78e05307b6d8bf1b29667f00cb17c194dfdf770473d6">Bitcoin Policy New Zealand Inc (50237351)</a></dd>
+      </div>
+      <div class="org-row">
+        <dt>NZBN</dt>
+        <dd>9429052975141</dd>
+      </div>
+      <div class="org-row">
+        <dt>Societies number</dt>
+        <dd>50237351</dd>
+      </div>
+    </dl>
+
+    <div class="ml-embedded" data-form="wh4HwA"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VISION  ·  content zone
+     ============================================================ -->
+<section class="band band-tint" id="vision">
+  <div class="wrap">
+    <p class="eyebrow">Vision</p>
+    <h2>Our vision</h2>
+    <p class="lead">We aim to empower New Zealand individuals, businesses, and government to fully participate in the Bitcoin Network, embracing its potential as a transformative monetary technology. Through education, advocacy, and practical support, we provide the knowledge and tools needed to achieve financial sovereignty, foster economic growth, and unlock the wide-ranging benefits of Bitcoin adoption.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PEOPLE  ·  content zone
+     ============================================================ -->
+<section class="band" id="people">
+  <div class="wrap">
+    <p class="eyebrow">People</p>
+    <h2>Our people</h2>
+    <p class="section-note">BPNZ Executive &amp; Committee</p>
+    <ul class="people-grid">
+      <li class="person">
+        <div class="person-info">
+          <span class="person-name">Kevin Whitmore</span>
+          <span class="person-role">Chairperson</span>
+        </div>
+        <a class="person-email" href="mailto:kev@nzbitcoin.org">Contact</a>
+      </li>
+      <li class="person">
+        <div class="person-info">
+          <span class="person-name">Daniel Reid</span>
+          <span class="person-role">Vice-Chairperson</span>
+        </div>
+      </li>
+      <li class="person">
+        <div class="person-info">
+          <span class="person-name">Derek Roth-Biester</span>
+          <span class="person-role">Secretary</span>
+        </div>
+      </li>
+      <li class="person">
+        <div class="person-info">
+          <span class="person-name">Cody Ellingham</span>
+          <span class="person-role">Media</span>
+        </div>
+        <a class="person-email" href="mailto:cody.ellingham@nzbitcoin.org">Contact</a>
+      </li>
+      <li class="person">
+        <div class="person-info">
+          <span class="person-name">Brandon Bucher</span>
+          <span class="person-role">Committee</span>
+        </div>
+      </li>
+      <li class="person">
+        <div class="person-info">
+          <span class="person-name">Jason Crowe</span>
+          <span class="person-role">Committee</span>
+        </div>
+        <a class="person-email" href="mailto:jason.crowe@nzbitcoin.org">Contact</a>
+      </li>
+      <li class="person">
+        <div class="person-info">
+          <span class="person-name">Mikey Smith</span>
+          <span class="person-role">Committee</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     POLICY  ·  content zone
+     ============================================================ -->
+<section class="band band-dark" id="policy">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">Policy</p>
+    <h2>Our Bitcoin policy paper</h2>
+    <p class="lead">Bitcoin is money. New Zealand's current tax rules make every Bitcoin transaction taxable, creating compliance burdens and discouraging everyday use.</p>
+    <p>A de minimis exemption for payments under NZD&nbsp;$1,000 would simplify reporting, encourage adoption, and reduce administrative costs. International examples, including the U.S., Germany, and Portugal, show that small-transaction exemptions boost compliance and innovation.</p>
+    <p>This policy would lower payment transaction fees, support fintech growth, expand consumer choice, and position New Zealand as a forward-thinking hub for digital finance.</p>
+    <a class="btn btn-primary" target="_blank" rel="noopener" href="BPNZ_Policy_Paper_De_minimis_Tax_Exemption_2025-11-12.pdf">View the policy paper (PDF)</a>
+  </div>
+</section>
+
+<!-- ============================================================
+     ARTICLES  ·  content zone
+     Add new articles by copying an <article class="article-card"> block
+     and creating a matching page in /articles/ from article-template.html
+     ============================================================ -->
+<section class="band" id="articles">
+  <div class="wrap">
+    <p class="eyebrow">Articles</p>
+    <h2>Latest articles</h2>
+
+    <div class="article-list">
+
+      <!-- ARTICLE CARD START -->
+      <article class="article-card">
+        <a class="article-thumb" href="Bitcoin-Has-Died-464-Times.pdf" target="_blank" rel="noopener">
+          <img src="bitcoin-deaths.png" alt="How many times has Bitcoin died?">
+        </a>
+        <div class="article-body">
+          <p class="article-date">13 February 2026</p>
+          <h3>Bitcoin Has Died 464 Times</h3>
+          <p class="article-standfirst">A rebuttal to Bitcoin's $7 billion reckoning.</p>
+          <p>Dr Simon Collins, Chief Revenue Officer at Lightning Pay and Founding Researcher at the Digital Assets Research Institute, revisits the running tally of Bitcoin obituaries. According to <a target="_blank" rel="noopener" href="https://bitcoindeaths.com/">bitcoindeaths.com</a>, Bitcoin has been declared dead 464 times — a documented count of published obituaries by journalists, economists, and commentators over Bitcoin's lifetime.</p>
+          <a class="read-more" target="_blank" rel="noopener" href="Bitcoin-Has-Died-464-Times.pdf">Read full article →</a>
+        </div>
+      </article>
+      <!-- ARTICLE CARD END -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQs  ·  content zone
+     ============================================================ -->
+<section class="band band-tint" id="faqs">
+  <div class="wrap">
+    <p class="eyebrow">FAQs</p>
+    <h2>Frequently asked questions</h2>
+
+    <div class="faq">
+      <details>
+        <summary>Is Bitcoin money?</summary>
+        <p>Yes. Bitcoin functions as a store of value, medium of exchange, and unit of account, though it is not currently legal tender in New Zealand.</p>
+      </details>
+      <details>
+        <summary>What does "de minimis" mean?</summary>
+        <p>It means "too small to matter" in legal terms, often referring to tax exemptions for small amounts below a certain threshold.</p>
+      </details>
+      <details>
+        <summary>What are the merchant fees to use Bitcoin Lightning?</summary>
+        <p>Typically fractions of a cent for routing, plus any service fees from the provider.</p>
+      </details>
+      <details>
+        <summary>For BTC → NZD, when does the swap happen exactly?</summary>
+        <p>The swap occurs when the payment provider converts Bitcoin to NZD. Lightning settlement is instant, exchange settlement is seconds to minutes, and bank transfer can be up to 1–2 business days.</p>
+      </details>
+      <details>
+        <summary>What company is behind Bitcoin?</summary>
+        <p>No single company owns Bitcoin. It is an open, decentralised network. The Bitcoin Lightning network is also open-source and maintained by independent contributors.</p>
+      </details>
+      <details>
+        <summary>What is a Bitcoin node? What does it mean to run a node?</summary>
+        <p>A node is software that stores and verifies the Bitcoin blockchain. Running a node means enforcing the rules yourself and increasing security and independence.</p>
+      </details>
+      <details>
+        <summary>How can Bitcoin be an export industry for New Zealand?</summary>
+        <ul>
+          <li>Through exporting energy via Bitcoin mining.</li>
+          <li>Through software, services, and infrastructure built on Bitcoin and Lightning.</li>
+          <li>Through education, IP, and technology development.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>What role could Bitcoin play in New Zealand's energy independence and resilience?</summary>
+        <ul>
+          <li>Stabilising electricity demand.</li>
+          <li>Monetising surplus renewable energy.</li>
+          <li>Supporting remote or isolated energy projects.</li>
+          <li>Helping finance new hydro, geothermal, and wind generation.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>What is a Bitcoin strategic reserve?</summary>
+        <p>A government-held Bitcoin reserve used for long-term savings, diversification, and protection against currency debasement.</p>
+      </details>
+      <details>
+        <summary>What is a Bitcoin treasury company?</summary>
+        <p>A company that holds Bitcoin as a core reserve asset for protection against inflation, diversification, or strategic positioning.</p>
+      </details>
+      <details>
+        <summary>Does the Reserve Bank of New Zealand hold any "assets"? Could they hold Bitcoin?</summary>
+        <p>Yes, the RBNZ holds foreign reserves and government bonds. They do not currently hold Bitcoin, but could do so if policy and legislation changed.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EVENTS  ·  content zone
+     ============================================================ -->
+<section class="band" id="events">
+  <div class="wrap">
+    <p class="eyebrow">Events</p>
+    <h2>Previous events</h2>
+
+    <div class="event">
+      <h3>BPNZ official launch — 12 November 2025</h3>
+      <p>The official launch of Bitcoin Policy New Zealand (BPNZ) was held on 12 November 2025 at Chouchou in Wellington. The evening included the release of BPNZ's first policy paper, <a target="_blank" rel="noopener" href="BPNZ_Policy_Paper_De_minimis_Tax_Exemption_2025-11-12.pdf">Bitcoin as Money: De minimis tax exemption for Bitcoin payments under NZD $1000</a>, presentations on Bitcoin innovation, and Lightning Network payment demonstrations, with attendees able to purchase drinks using Bitcoin.</p>
+      <p>The event drew 40 VIP guests, including Hon. Nicole McKee, Minister for Courts and Associate Minister of Justice, Joseph Mooney MP, Greg Fleming MP, and ACT List MP Cameron Luxton, along with representatives from leading Bitcoin businesses, government departments, and other stakeholders. BPNZ Chairperson Kevin Whitmore highlighted how New Zealand's current tax rules make small Bitcoin transactions difficult to account for and presented our proposal for a de minimis exemption to simplify compliance, lower payment costs, and support innovation.</p>
+      <p>The launch demonstrated how Bitcoin can function as money in New Zealand, reinforcing BPNZ's mission to enable the country's participation in the global shift toward digital, open-standard money while engaging policymakers, industry leaders, and the public.</p>
+      <p><a class="read-more" target="_blank" rel="noopener" href="https://www.thetransformationofvalue.com/articles/lightning-bolts-of-bitcoin-innovation-strike-the-capital">Read full article →</a></p>
+      <div class="gallery">
+        <img src="Hon-Nicole-McKee-BPNZ-launch.jpg" alt="Hon. Nicole McKee at the BPNZ Wellington launch" loading="lazy">
+        <img src="Joseph-Mooney-BPNZ.jpg" alt="Joseph Mooney MP at the BPNZ launch" loading="lazy">
+        <img src="BPNZ-chairperson-Kevin-Whitmore.jpg" alt="BPNZ Chairperson Kevin Whitmore" loading="lazy">
+        <img src="BPNZ-launch-event.jpg" alt="The BPNZ launch event" loading="lazy">
+        <img src="Bitcoin-Lightning-card-being-used-for-payments.jpg" alt="A Bitcoin Lightning card being used for payments" loading="lazy">
+        <img src="Bitcoin-point-of-sale-Chouchou.jpg" alt="Bitcoin point of sale at Chouchou, Wellington" loading="lazy">
+      </div>
+    </div>
+
+    <hr class="rule">
+
+    <div class="event">
+      <h3>BPNZ at New Zealand Parliament — 4 June 2025</h3>
+      <p>On Wednesday 4 June 2025, Kiwi Bitcoin experts, members of Bitcoin Policy New Zealand, and representatives from the Bitcoin Basin circular economy gave a special presentation to over 20 coalition MPs at New Zealand's Parliament.</p>
+      <p><a class="read-more" target="_blank" rel="noopener" href="https://www.thetransformationofvalue.com/articles/new-zealand-parliament-buzzes-with-bitcoin">Read full article →</a></p>
+      <div class="gallery">
+        <img src="gallery1.jpg" alt="BPNZ presentation at Parliament" loading="lazy">
+        <img src="gallery2.jpg" alt="BPNZ presentation at Parliament" loading="lazy">
+        <img src="gallery3.jpg" alt="BPNZ presentation at Parliament" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MEMBERSHIP  ·  content zone
+     Summary only — payment + full terms handled at BTCPay.
+     ============================================================ -->
+<section class="band band-tint" id="membership">
+  <div class="wrap">
+    <p class="eyebrow">Membership</p>
+    <h2>Membership &amp; donations</h2>
+    <p class="lead">BPNZ offers annual membership to individuals and organisations who want to support thoughtful, constructive Bitcoin policy in New Zealand. Membership fees can be paid in NZD or bitcoin.</p>
+
+    <div class="tiers">
+      <div class="tier">
+        <p class="tier-name">Individual</p>
+        <p class="tier-price">$50<span>&nbsp;NZD/year</span></p>
+        <p class="tier-note">One vote on BPNZ matters, including committee appointments and items raised at the AGM.</p>
+      </div>
+      <div class="tier">
+        <p class="tier-name">Corporate</p>
+        <p class="tier-price">$1,000<span>&nbsp;NZD/year</span></p>
+        <p class="tier-note">One nominated representative votes on the organisation's behalf.</p>
+      </div>
+    </div>
+
+    <p>Membership runs for 12 months from the date of payment. If you pay in bitcoin, your membership is confirmed once payment is received and processed. You're also welcome to support our work with a donation in NZD or bitcoin — BPNZ is not a registered charity, so donations aren't tax-deductible and don't include voting rights unless you also sign up as a member.</p>
+
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://btcpay.nzbitcoin.org/" target="_blank" rel="noopener">Join or donate now (BTC &amp; fiat)</a>
+    </div>
+
+    <p class="membership-feedback">Questions or feedback about membership? Email <a href="mailto:memberfeedback@nzbitcoin.org">memberfeedback@nzbitcoin.org</a></p>
+  </div>
+</section>
+
+<!-- ============================================================
+     COLLABORATORS  ·  content zone
+     ============================================================ -->
+<section class="band" id="collaborators">
+  <div class="wrap">
+    <p class="eyebrow">Collaborators</p>
+    <h2>Our international collaborators</h2>
+    <div class="sponsors">
+      <a href="https://bitcoincoalition.ca/" target="_blank" rel="noopener">
+        <img src="bcc.jpg" alt="Bitcoin Coalition of Canada" loading="lazy">
+      </a>
+      <a href="https://bitcoinindustrybody.org.au/" target="_blank" rel="noopener">
+        <img src="abib.png" alt="Australian Bitcoin Industry Body" loading="lazy">
+      </a>
+      <a href="https://bitcoinpolicy.au/" target="_blank" rel="noopener">
+        <img src="bitcoin-policy-australia-logo.png" alt="Bitcoin Policy Australia" loading="lazy">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT + MEMBERSHIP CTA  ·  content zone
+     ============================================================ -->
+<section class="band band-dark" id="contact">
+  <div class="wrap wrap-center">
+    <p class="eyebrow eyebrow-light">Join us</p>
+    <h2>Become a member of BPNZ</h2>
+    <p class="lead">We are gathering interest from individuals and organisations who want to support Bitcoin education, adoption, and policy in New Zealand.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://btcpay.nzbitcoin.org/" target="_blank" rel="noopener">Become a member</a>
+      <a class="btn btn-ghost" href="mailto:info@nzbitcoin.org">Email info@nzbitcoin.org</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER  (shared across all pages)
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <img class="footer-logo" src="logo.png" alt="Bitcoin Policy New Zealand">
+    <p class="footer-contact"><a href="mailto:info@nzbitcoin.org">info@nzbitcoin.org</a></p>
+    <p class="footer-meta">
+      &copy; 2026 Bitcoin Policy New Zealand · Registered Incorporated Society 50237351<br>
+      Follow us on <a href="https://x.com/bitcoinpolicynz" target="_blank" rel="noopener">Twitter/X</a>
+    </p>
+  </div>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>
